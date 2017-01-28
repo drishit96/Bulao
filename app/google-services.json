@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "738444746727",
+    "firebase_url": "https://bulalo-5f7d7.firebaseio.com",
+    "project_id": "bulalo-5f7d7",
+    "storage_bucket": "bulalo-5f7d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738444746727:android:b5bd962df1b21d93",
+        "android_client_info": {
+          "package_name": "bulao.com.project.bulao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738444746727-6n16gqs2oufh3tv2fqvogoc4fe7bpbc1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bulao.com.project.bulao",
+            "certificate_hash": "9F97F8A8A23093AD68F547C387DA512B3C55BA97"
+          }
+        },
+        {
+          "client_id": "738444746727-kdqc89kre06a82j6kkm5u6jif71a0ase.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7Y1YnaekOzJpvWFagGegPKXJ5k1DSsIw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738444746727-kdqc89kre06a82j6kkm5u6jif71a0ase.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
