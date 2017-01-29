@@ -1,7 +1,6 @@
 package bulao.com.project.bulao;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +9,6 @@ import android.view.View;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import static android.R.id.message;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -50,16 +47,33 @@ public class MainActivity extends AppCompatActivity {
         createUser();
     }
 
-    public void createUser() {
+    @Override
+    protected void onPause() {
+        super.onPause();
+        firebaseAuth.removeAuthStateListener(authStateListener);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        firebaseAuth.addAuthStateListener(authStateListener);
+    }
+
+    public void createUser() {
+        Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+        startActivity(intent);
     }
 
     public void sendHelpMessage(View view) {
+        Intent intent = new Intent(MainActivity.this, BluetoothActivity.class);
+        startActivity(intent);
+        /*
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if (user != null) {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + "8080276120"));
             intent.putExtra("Id: " + user.getUid() + "\nName: " + user.getDisplayName(), message);
             startActivity(intent);
         }
+        */
     }
 }

@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import bulao.com.project.bulao.Model.Person;
 
@@ -29,8 +31,11 @@ public class RegisterActivity extends AppCompatActivity {
         if (number != null && friendNumber != null) {
             person.setNumber(number.getText().toString());
             person.setAlernateNumber(friendNumber.getText().toString());
-
             person.setName(user.getDisplayName());
+
+            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+            DatabaseReference databaseReference = firebaseDatabase.getReference().child("users").child(user.getUid());
+            databaseReference.setValue(person);
         }
     }
 }

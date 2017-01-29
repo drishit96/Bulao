@@ -2,7 +2,7 @@ package bulao.com.project.bulao.Model;
 
 
 public class Person {
-    private String name, number, alternateNumber, home;
+    private String name, number, alternateNumber;
 
     public String getName() {
         return name;
@@ -26,13 +26,5 @@ public class Person {
 
     public void setAlernateNumber(String alernateNumber) {
         this.alternateNumber = alernateNumber;
-    }
-
-    public String getHome() {
-        return home;
-    }
-
-    public void setHome(String home) {
-        this.home = home;
     }
 }
