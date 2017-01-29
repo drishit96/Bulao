@@ -10,27 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="bulao.com.project.bulao.RegisterActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/number" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/friend_number"
-        android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
     <TextView
         android:text="Your Number: "
         android:layout_width="wrap_content"
@@ -42,6 +21,19 @@
         android:layout_marginRight="64dp"
         android:layout_marginEnd="64dp" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/friend_number"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/textView2"
+        android:layout_toEndOf="@id/textView2"/>
+
     <TextView
         android:text="Trusted Friend's Number: "
         android:layout_width="wrap_content"
@@ -51,6 +43,18 @@
         android:layout_below="@+id/number"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/textView"
+        android:layout_toEndOf="@id/textView"
+        android:id="@+id/number" />
 
     <Button
         android:text="Register"

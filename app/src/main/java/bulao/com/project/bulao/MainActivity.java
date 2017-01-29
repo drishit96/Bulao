@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public synchronized void sendHelpMessage(View view) {
+    public void sendHelpMessage(View view) {
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if (user != null) {
             if (!location.hasLocationEnabled()) {
@@ -97,6 +97,6 @@ public class MainActivity extends AppCompatActivity {
     @TargetApi(23)
     public void sendSMS() {
         SmsManager sms = SmsManager.getDefault();
-        //sms.sendTextMessage("8080276120", null, "Id: " + user.getUid() + "\nName: " + user.getDisplayName() + "\nLatitude: " + location.getLatitude() + "\n Longitude: " + location.getLongitude(), null, null);
+        sms.sendTextMessage("9769692910", null, "Id: " + user.getUid() + "\nName: " + user.getDisplayName() + "\nLatitude: " + location.getLatitude() + "\n Longitude: " + location.getLongitude(), null, null);
     }
 }
