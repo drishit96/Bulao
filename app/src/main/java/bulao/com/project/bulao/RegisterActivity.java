@@ -36,6 +36,8 @@ public class RegisterActivity extends AppCompatActivity {
             FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
             DatabaseReference databaseReference = firebaseDatabase.getReference().child("users").child(user.getUid());
             databaseReference.setValue(person);
+
+            finish();
         }
     }
 }
